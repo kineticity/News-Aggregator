@@ -24,7 +24,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
-
+```
 
 **## 🔁 Automating News Scraping with Task Scheduler
 **To keep the news updated regularly, use the provided scrapenews.bat file and schedule it with Windows Task Scheduler.
