@@ -5,7 +5,7 @@ A Django-based web application that scrapes news from major Indian news sources 
 ## 📸 Screenshots
 
 ### 🏠 Homepage with Categorized News
-![Homepage Screenshot](images/websiteUI.png)
+![Homepage Screenshot](websiteUI.png)
 
 ## ⚙️ Features
 
