@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Aggregator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Additional styles for positioning and layout */
+        .news-source {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body {
+            position: relative;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .card .btn {
+            margin-top: 10px;
+        }
+
+        .summary {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Active category style */
+        .nav-link.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .nav-pills .nav-link {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-light">
+<div class="container py-4">
+    <h2 class="mb-4">🗞 Latest News</h2>
+
+    <!-- Category Navigation -->
+    <ul class="nav nav-pills mb-4">
+        <li class="nav-item">
+            <a class="nav-link {% if category == 'General' %}active{% endif %}" href="?category=General">General</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if category == 'Sports' %}active{% endif %}" href="?category=Sports">Sports</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if category == 'Technology' %}active{% endif %}" href="?category=Technology">Technology</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link {% if category == 'Business' %}active{% endif %}" href="?category=Business">Business</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if category == 'India' %}active{% endif %}" href="?category=India News">India News</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if category == 'World' %}active{% endif %}" href="?category=World">World</a>
+        </li>
+    </ul>
+
+    <!-- Articles Section -->
+    <div class="row">
+        {% for article in articles %}
+            {% if article.category == category or category == 'General' %}
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <!-- News Source in Top Right Corner -->
+                            <div class="news-source">{{ article.source }}</div>
+
+                            <!-- Title of the article -->
+                            <h5 class="card-title"><a href="{{ article.url }}" target="_blank">{{ article.title }}</a></h5>
+
+                            <!-- Summary of the article -->
+                            <p class="summary">{{ article.summary }}</p>
+
+                            <!-- Read More Button -->
+                            <a href="{{ article.url }}" target="_blank" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,37 @@
+Current dir: D:\News Aggregator\newsaggregator 
+E:\Anaconda\python.exe
+C:\Users\Keertana\AppData\Local\Programs\Python\Python39\python.exe
+Python 3.9.12
+Starting news scraping...
+News scraping completed successfully.
+Starting news scraping...
+News scraping completed successfully.
+Starting news scraping...
+News scraping completed successfully.
+Starting news scraping...
+News scraping completed successfully.
+Starting news scraping...
+News scraping completed successfully.
+Starting news scraping...
+Sports
+India News
+India News
+Sports
+World
+India News
+Sports
+General
+Business
+India News
+Sports
+Sports
+Sports
+Sports
+World
+World
+General
+Sports
+Sports
+General
+India News
+News scraping completed successfully.
