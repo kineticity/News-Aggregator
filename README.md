@@ -26,26 +26,28 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-**## 🔁 Automating News Scraping with Task Scheduler
-**To keep the news updated regularly, use the provided scrapenews.bat file and schedule it with Windows Task Scheduler.
+## 🔁 Automating News Scraping with Task Scheduler
 
-🧾 scrapenews.bat
-Create a file named scrapenews.bat like the one in the repo:
+To keep the news updated regularly, use the provided `scrapenews.bat` file and schedule it with **Windows Task Scheduler**.
+
+### 🧾 scrapenews.bat
+
+Create a file named `scrapenews.bat` like the one in the repository
 📍 Make sure to update the path "D:\News Aggregator" with your actual project path if it differs.
 
-**Setting It Up with Windows Task Scheduler
-**Open Task Scheduler (search from Start Menu).
+### 🗓 Setting It Up with Windows Task Scheduler
 
-Click Create Basic Task.
+Follow these steps to automate your scraping script:
 
-Name it something like News Scraper.
+1. **Open Task Scheduler** (search for it in the Start Menu).
+2. Click **Create Basic Task** on the right panel.
+3. **Give your task a name**, like `News Scraper`.
+4. **Set the Trigger**:
+   - Choose **Daily**, or  
+   - Select **One Time** and configure **Advanced Settings** to repeat every hour or as needed.
+5. **Set the Action**:
+   - Choose **Start a Program**.
+   - In the **Program/script** field, **browse and select your `scrapenews.bat` file**.
+6. Click **Finish** to schedule the task.
 
-Set the trigger (e.g., Daily, or Repeat every 1 hour).
-
-For the Action, choose Start a Program.
-
-In Program/script, browse and select your scrapenews.bat file.
-
-Finish the wizard.
-
-✅ This will make sure your news scraper runs periodically and updates the site automatically.
+✅ Your scraper will now run automatically at the configured intervals and keep your site up to date!
